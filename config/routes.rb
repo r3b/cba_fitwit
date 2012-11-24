@@ -271,7 +271,8 @@ Cba::Application.routes.draw do
 
   # ROOT
   match "fitwit_blogs" => "home#index"
-  #root :to => 'home#index'
-  root :to => "home#start_page"
+	devise_scope :user do
+	  root to: "devise/sessions#new"
+	end
 
 end

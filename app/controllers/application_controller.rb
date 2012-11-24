@@ -194,4 +194,11 @@ private
     request.accepts.sort! { |x, y| ajax_request_types.include?(y.to_s) ? 1 : -1 } if request.xhr?
   end
 
+  def stored_location_for(resource_or_scope)
+    nil
+  end
+
+  def after_sign_in_path_for(resource_or_scope)
+    '/my_fit_wit/index'
+  end
 end
