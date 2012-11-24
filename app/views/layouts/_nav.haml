@@ -4,36 +4,6 @@
   %ul#menu-top-menu.sf-menu
     %li.menu-item{class: params[:action] == 'start_page' ? "current-menu-item" : "" }
       = link_to "Home", root_url
-    %li.menu-item{class: params[:action] == 'locations' ? "current-menu-item" : "" }
-      = link_to "Locations", locations_url
-      %ul
-        - @site_blogs.each do |sb|
-          %li.menu_item
-            = link_to sb.title, blog_url(sb.id)
-    %li.menu-item{class: @camp_details ? "current-menu-item" : "" }
-      = link_to "Camp Details", camp_details_url
-      %ul
-        %li.menu-item
-          = link_to "Getting Started", getting_started_url
-        %li.menu-item
-          = link_to "What's Included", whats_included_url
-        %li.menu-item
-          = link_to "FAQ", faq_url
-        %li.menu-item
-          = link_to "Price & Schedule", price_url
-    %li.menu-item{class: params[:action] == 'fit_wit_activity' ? "current-menu-item" : "" }
-      = link_to "Activity", activity_path
-    %li.menu-item{class: params[:action] == 'non_profit' ? "current-menu-item" : "" }
-      = link_to "Non-profit", non_profit_url
-    %li.menu-item{class: @stories ? "current-menu-item" : "" }
-      = link_to "Stories", camper_stories_url
-      %ul
-        %li.menu-item
-          = link_to "Camper Stories", camper_stories_url
-        %li.menu-item
-          = link_to "Company Story", company_story_url
-        %li.menu-item
-          = link_to "Team", team_story_url
     %li.menu-item{class: params[:action] == 'contact' ? "current-menu-item" : "" }
       = link_to "Contact", contact_url
 
